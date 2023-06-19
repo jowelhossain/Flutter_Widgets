@@ -14,7 +14,7 @@ class _ContExpState extends State<ContExp> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Container/Expanded"),
+          title: Text("Container"),
           centerTitle: true,
         ),
         body: Padding(
@@ -32,17 +32,25 @@ class _ContExpState extends State<ContExp> {
                         width: double.infinity,
                         margin: EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                            color: Color.fromARGB(199, 148, 148, 59),
+                            color: Colors.green,
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(50),
                                 topLeft: Radius.circular(100),
                                 bottomRight: Radius.elliptical(200, 100)),
                             border: Border.all(width: 10, color: Colors.white)),
                         child: Center(
-                            child: Text(
-                          "Hello!",
-                          style: TextStyle(color: Colors.white, fontSize: 30),
-                        )),
+                            child: Container(
+                                height: 200,
+                                width: 200,
+                                decoration: BoxDecoration(
+                                    color: Colors.red, shape: BoxShape.circle),
+                                child: Center(
+                                  child: Text(
+                                    "Bangladesh",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 30),
+                                  ),
+                                ))),
                       )),
                   Expanded(
                       flex: 1,
